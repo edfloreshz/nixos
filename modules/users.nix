@@ -13,6 +13,7 @@
   users.users.jellyfin.extraGroups = [ "media" ];
 
   programs.fish.enable = true;
+  programs.ssh.startAgent = true;
   programs.git = {
     enable = true;
     config = {

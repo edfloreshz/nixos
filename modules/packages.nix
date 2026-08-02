@@ -7,5 +7,6 @@
     samba
     btop
     git
+    gnupg
   ];
 }
