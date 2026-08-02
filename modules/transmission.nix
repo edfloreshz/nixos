@@ -10,7 +10,7 @@
 
   services.transmission = {
     enable = true;
-    openRpcPort = false;
+    openRPCPort = false;
     credentialsFile = config.sops.secrets.transmission_rpc_password.path;
     settings = {
       rpc-bind-address = "127.0.0.1";
