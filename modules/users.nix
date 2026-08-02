@@ -13,7 +13,6 @@
   users.users.jellyfin.extraGroups = [ "media" ];
 
   programs.fish.enable = true;
-  programs.ssh.startAgent = true;
   programs.git = {
     enable = true;
     config = {
@@ -23,5 +22,10 @@
       };
       init.defaultBranch = "main";
     };
+  };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+    pinentryPackage = pkgs.pinentry-curses;
   };
 }

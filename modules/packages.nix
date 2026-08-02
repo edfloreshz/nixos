@@ -8,5 +8,6 @@
     btop
     git
     gnupg
+    pinentry-curses
   ];
 }
