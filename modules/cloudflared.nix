@@ -5,10 +5,7 @@
 # `cloudflared_credentials` (see modules/sops.nix for the sops command).
 { config, ... }:
 {
-  sops.secrets.cloudflared_credentials = {
-    owner = config.services.cloudflared.user;
-    group = config.services.cloudflared.group;
-  };
+  sops.secrets.cloudflared_credentials = { };
 
   services.cloudflared = {
     enable = true;
