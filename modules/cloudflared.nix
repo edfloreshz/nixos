@@ -15,7 +15,7 @@
         default = "http_status:404";
         ingress = {
           "stream.edfloreshz.dev" = "http://localhost:8096";
-          "torrent.edfloreshz.dev" = "http://localhost:9091";
+          "torrent.edfloreshz.dev" = "http://localhost:8080";
         };
       };
     };

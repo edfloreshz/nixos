@@ -17,11 +17,10 @@
     ./modules/ssh.nix
     ./modules/sops.nix
     ./modules/cloudflared.nix
-    ./modules/transmission.nix
+    ./modules/qbittorrent.nix
   ];
 
   # This value should stay at the version first installed on this machine.
   # See: https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion
   system.stateVersion = "26.05";
 }
-
