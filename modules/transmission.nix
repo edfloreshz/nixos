@@ -16,8 +16,12 @@
       rpc-bind-address = "127.0.0.1";
       rpc-authentication-required = true;
       rpc-username = "eduardo";
-      download-dir = "/var/lib/transmission/downloads";
+      download-dir = "/mnt/omega/Uncategorized";
       incomplete-dir-enabled = true;
     };
   };
+
+  systemd.tmpfiles.rules = [
+    "d /mnt/omega/Uncategorized 0770 transmission transmission -"
+  ];
 }
