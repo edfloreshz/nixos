@@ -15,6 +15,8 @@
     ./modules/samba.nix
     ./modules/jellyfin.nix
     ./modules/ssh.nix
+    ./modules/sops.nix
+    ./modules/cloudflared.nix
   ];
 
   # This value should stay at the version first installed on this machine.

@@ -9,5 +9,6 @@
     git
     gnupg
     pinentry-curses
+    cloudflared
   ];
 }
