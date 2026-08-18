@@ -10,5 +10,7 @@
     gnupg
     pinentry-curses
     cloudflared
+    ffmpeg
+    python3
   ];
 }
