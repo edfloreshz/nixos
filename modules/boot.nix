@@ -1,9 +1,7 @@
 { pkgs, ... }:
 {
+  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [
-    "usb-storage.quirks=0bda:9201:u"
-  ];
+  boot.kernelPackages = pkgs.linuxPackages_7_1;
 }

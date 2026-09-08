@@ -13,7 +13,7 @@
       };
 
       delta = {
-        "path" = "/mnt/delta";
+        "path" = "/media/Delta";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "no";
@@ -23,7 +23,7 @@
       };
 
       omega = {
-        "path" = "/mnt/omega";
+        "path" = "/media/Omega";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "no";

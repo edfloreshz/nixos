@@ -12,5 +12,6 @@
     cloudflared
     ffmpeg
     python3
+    claude-code
   ];
 }

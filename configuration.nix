@@ -5,9 +5,12 @@
 {
   imports = [
     ./hardware-configuration.nix
+    <sops-nix/modules/sops>
 
     ./modules/boot.nix
     ./modules/storage.nix
+    ./modules/desktop.nix
+    ./modules/nvidia.nix
     ./modules/networking.nix
     ./modules/power.nix
     ./modules/users.nix

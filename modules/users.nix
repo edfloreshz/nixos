@@ -4,7 +4,8 @@
 
   users.users.eduardo = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "media" ];
+    description = "Eduardo Flores";
+    extraGroups = [ "networkmanager" "wheel" "media" ];
     packages = with pkgs; [
       tree
     ];
@@ -23,6 +24,7 @@
       init.defaultBranch = "main";
     };
   };
+
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;

@@ -1,11 +1,10 @@
 { ... }:
 {
-  networking.hostName = "nixos";
+  networking.hostName = "jelly";
   networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.powersave = false;
 
-  networking.interfaces.wlo1.ipv4.addresses = [{
-    address = "192.168.1.56";
+  networking.interfaces.enp4s0.ipv4.addresses = [{
+    address = "192.168.1.108";
     prefixLength = 24;
   }];
   networking.defaultGateway = "192.168.1.1";

@@ -1,6 +1,5 @@
 # sops-nix: encrypted secrets, decrypted at activation time using an age
-# key that lives only on the host (not tracked in this repo). The
-# sops-nix module itself is imported via the flake input in flake.nix.
+# key that lives only on the host (not tracked in this repo).
 #
 # One-time host setup:
 #   1. mkdir -p /var/lib/sops-nix
