@@ -3,7 +3,7 @@
   fileSystems."/media/Delta" = {
     device = "/dev/disk/by-uuid/6A9D-9852";
     fsType = "exfat";
-    options = [ "nofail" "x-systemd.automount" "x-systemd.device-timeout=10" ];
+    options = [ "nofail" "x-systemd.automount" "x-systemd.device-timeout=10" "gid=986" "dmask=0002" "fmask=0113" ];
   };
 
   fileSystems."/media/Omega" = {

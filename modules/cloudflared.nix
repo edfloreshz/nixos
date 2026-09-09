@@ -16,6 +16,8 @@
         ingress = {
           "stream.edfloreshz.dev" = "http://localhost:8096";
           "torrent.edfloreshz.dev" = "http://localhost:8080";
+          "minepanel.edfloreshz.dev" = "http://localhost:3000";
+          "minepanel-api.edfloreshz.dev" = "http://localhost:8091";
         };
       };
     };

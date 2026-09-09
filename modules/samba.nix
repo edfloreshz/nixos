@@ -4,7 +4,7 @@
     enable = true;
     openFirewall = true;
     settings = {
-      global = {
+      Global = {
         "workgroup" = "WORKGROUP";
         "server string" = "Jellyfin";
         "netbios name" = "Jellyfin";
@@ -12,7 +12,7 @@
         "map to guest" = "never";
       };
 
-      delta = {
+      Delta = {
         "path" = "/media/Delta";
         "browseable" = "yes";
         "read only" = "no";
@@ -22,7 +22,7 @@
         "force group" = "media";
       };
 
-      omega = {
+      Omega = {
         "path" = "/media/Omega";
         "browseable" = "yes";
         "read only" = "no";

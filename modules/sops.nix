@@ -13,4 +13,12 @@
 {
   sops.defaultSopsFile = ../secrets/secrets.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
+
+  # So `sudo sops secrets/secrets.yaml` finds the age key without having to
+  # type SOPS_AGE_KEY_FILE=... every time (the key is root-owned, so editing
+  # secrets still requires sudo).
+  environment.variables.SOPS_AGE_KEY_FILE = "/var/lib/sops-nix/key.txt";
+  security.sudo.extraConfig = ''
+    Defaults env_keep += "SOPS_AGE_KEY_FILE"
+  '';
 }

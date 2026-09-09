@@ -4,6 +4,7 @@
     vim
     wget
     fish
+    firefox
     samba
     btop
     git

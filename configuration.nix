@@ -5,7 +5,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    <sops-nix/modules/sops>
 
     ./modules/boot.nix
     ./modules/storage.nix
@@ -21,7 +20,13 @@
     ./modules/sops.nix
     ./modules/cloudflared.nix
     ./modules/qbittorrent.nix
+    ./modules/docker.nix
+    ./modules/minepanel.nix
   ];
+
+  nixpkgs.config.allowUnfree = true;
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # This value should stay at the version first installed on this machine.
   # See: https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion

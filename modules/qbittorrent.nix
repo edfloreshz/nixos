@@ -1,6 +1,11 @@
-{ config, ... }:
+{ config, lib, pkgs, ... }:
+let
+  passwordPlaceholder = "@qbittorrent_webui_password_pbkdf2@";
+in
 {
-  sops.secrets.qbittorrent_webui_password_pbkdf2 = { };
+  sops.secrets.qbittorrent_webui_password_pbkdf2 = {
+    owner = "eduardo";
+  };
 
   services.qbittorrent = {
     enable = true;
@@ -15,9 +20,17 @@
           Address = "0.0.0.0";
           HostHeaderValidation = false;
           Username = "medusin";
-          Password_PBKDF2 = builtins.readFile config.sops.secrets.qbittorrent_webui_password_pbkdf2.path;
+          Password_PBKDF2 = passwordPlaceholder;
         };
       };
     };
+  };
+
+  systemd.services.qbittorrent = {
+    after = [ "sops-nix.service" ];
+    wants = [ "sops-nix.service" ];
+    serviceConfig.ExecStartPre = lib.mkAfter [
+      "${lib.getExe pkgs.replace-secret} '${passwordPlaceholder}' '${config.sops.secrets.qbittorrent_webui_password_pbkdf2.path}' '${config.services.qbittorrent.profileDir}/qBittorrent/config/qBittorrent.conf'"
+    ];
   };
 }
