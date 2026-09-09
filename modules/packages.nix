@@ -14,5 +14,6 @@
     ffmpeg
     python3
     claude-code
+    gh
   ];
 }
